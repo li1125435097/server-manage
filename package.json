@@ -1,0 +1,22 @@
+{
+  "name": "server-manage",
+  "version": "1.0.0",
+  "description": "distributed service tty, cluster manager, server  monitor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npx nodemon ./lib/server.js",
+    "client": "npx nodemon ./lib/client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li1125435097/server-manage.git"
+  },
+  "keywords": ["distributed","file","cluster","manage","monitor","server"],
+  "author": "geekestli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/li1125435097/server-manage/issues"
+  },
+  "homepage": "https://github.com/li1125435097/server-manage#readme"
+}
