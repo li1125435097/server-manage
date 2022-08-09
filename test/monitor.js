@@ -8,8 +8,9 @@ async function main(){
   let cs = await getData('cmd','ls').catch((err)=>{l(err)})
   let gc = await getData('gc','ls').catch((err)=>{l(err)})
   let cl = await getData('cmdl','ls').catch((err)=>{l(err)})
-  l(cl)
-  // l(gc)
+  // l(cl)
+  l(gc)
+  l(cs)
 }
 main()
 

@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tindex": "node ./test/index.js",
     "tserver": "node ./test/server.js",
+    "tmonitor": "node ./test/monitor.js",
     "tclient": "node ./test/client.js"
   },
   "repository": {
