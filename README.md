@@ -15,9 +15,14 @@ server_manage(serverIp,serverPort)
 const { monitor } = require('server-manage')
 async function main(){
 let getData = monitor(serverPort,serverIp)
-  let gc = await getData('gc').catch((err)=>{l(err)})                // 获取所有客户端
-  let cs = await getData('cmd','ls',ip,port).catch((err)=>{l(err)})  // 通过服务端转发到指定客户端运行cmd命令，并返回结果  ip、port可通过上个命令返回结果提取
-  let cl = await getData('cmdl','ls').catch((err)=>{l(err)})         // 到服务端运行cmd命令，并返回结果
+  // 获取所有客户端
+  let gc = await getData('gc').catch((err)=>{l(err)})                
+
+  // 通过服务端转发到指定客户端运行cmd命令，并返回结果  ip、port可通过上个命令返回结果提取
+  let cs = await getData('cmd','ls',ip,port).catch((err)=>{l(err)})  
+
+  // 到服务端运行cmd命令，并返回结果
+  let cl = await getData('cmdl','ls').catch((err)=>{l(err)})         
   l(cl,cs,gc)
 }
 main()
@@ -30,9 +35,14 @@ main()
 
 ## 四、参数
 ```javascript
-server_manage(serverIP,serverPort,protocol='udp4',getIp=_getIp) return server      // 支持protocol='udp6',传getIp函数视为重写getIp方法，这个方法返回当前服务器ip的字符串
-monitor(serverPort,serverIp,protocol='udp4') return false                          // protocol要和上边保持一致
-getData(type,data,ip=clients[0],port=clients[0].port,timeout=1000) return response // type in ['gc','cmd','cmdl','close'], data是type命令的参数   
+// 支持protocol='udp6',传getIp函数视为重写getIp方法，这个方法返回当前服务器ip的字符串
+server_manage(serverIP,serverPort,protocol='udp4',getIp=_getIp) return server      
+
+// protocol要和上边保持一致
+monitor(serverPort,serverIp,protocol='udp4') return false     
+
+// type in ['gc','cmd','cmdl','close'], data是type命令的参数   
+getData(type,data,ip=clients[0],port=clients[0].port,timeout=1000) return response
 ```
 
 ## 五、系统价值
