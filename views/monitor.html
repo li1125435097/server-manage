@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{
+      list-style-type: none;
+      display: flex;	
+      justify-content: center;
+      padding-inline-start: 0px;
+    }
+    body{
+      background-color: black;
+    }
+    #nav li{
+      margin: 1rem;
+    }
+    #nav button{
+        border: 1px solid;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 10px 20px;
+        font-weight: 300;
+        box-sizing: unset;
+    }
+    
+    #nav li:nth-child(1) button{color: #4cc9f0;}
+    #nav li:nth-child(2) button{color: #f038ff;}
+    #nav li:nth-child(3) button{color: #b9e769;}
+    #nav li:nth-child(4) button{color: #4cc9f0;}
+    #nav li:nth-child(5) button{color: #f038ff;}
+    #nav li:nth-child(6) button{color: #b9e769;}
+    #nav li:nth-child(7) button{color: #4cc9f0;}
+    #nav li:nth-child(8) button{color: #f038ff;}
+    
+    #nav li:nth-child(1) button:hover,
+    #nav li:nth-child(4) button:hover,
+    #nav li:nth-child(7) button:hover
+    {
+      color: white;  border:1px solid rgba(0,0,0,0);
+      background-color: #4cc9f0;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+      box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    }
+    #nav li:nth-child(2) button:hover,
+    #nav li:nth-child(5) button:hover,
+    #nav li:nth-child(8) button:hover
+    {
+      color: white;  border:1px solid rgba(0,0,0,0);
+      background-color: #f038ff;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+      box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+    }
+    #nav li:nth-child(3) button:hover,
+    #nav li:nth-child(6) button:hover
+    {
+      color: white;  border:1px solid rgba(0,0,0,0);
+      background-color: #b9e769;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+    }
+    #content{
+      width: 80%;
+      height: 80vh;
+      margin: 0 auto;	
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(185, 231, 105, 1);
+    }
+    #content iframe{
+      border: none;
+      display: none;
+    }
+    .select{
+      color: white !important;  border:1px solid rgba(0,0,0,0) !important;
+      background-color: #4cc9f0 !important;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);	
+    }
+  </style>
+</head>
+<body>
+  <ul id="nav">
+    <li><button class="btn" onclick="handle(1)">发送效果</button></li>
+    <li><button class="btn" onclick="handle(2)">霓虹效果</button></li>
+    <li><button class="btn" onclick="handle(3)">边框效果</button></li>
+    <li><button class="btn" onclick="handle(4)">圆形效果</button></li>
+    <li><button class="btn" onclick="handle(5)">圆角效果</button></li>
+    <li><button class="btn" onclick="handle(6)">冰冻效果</button></li>
+    <li><button class="btn" onclick="handle(7)">闪亮效果</button></li>
+    <li><button class="btn" onclick="handle(8)">加载效果</button></li>
+  </ul>
+  
+  <div id="content">
+    <iframe src="./html/senddisplay.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/flashshow.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/bordershow.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/roundshow.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/roundangle.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/frezz.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/light.html" width="100%" height="100%"></iframe>
+    <iframe src="./html/loading.html" width="100%" height="100%"></iframe>
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script>
+</body>
+</html>
